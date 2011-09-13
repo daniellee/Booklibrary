@@ -1,0 +1,7 @@
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\bin\BookLibrary.UI.dll
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\bin\BookLibrary.UI.pdb
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\bin\EntityFramework.dll
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\bin\EntityFramework.xml
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\obj\Debug\ResolveAssemblyReference.cache
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\obj\Debug\BookLibrary.UI.dll
+C:\Projekt\Booklibrary\BookLibrary\BookLibrary.UI\obj\Debug\BookLibrary.UI.pdb
