@@ -53,16 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Controllers\HomeControllerTests.cs" />
+    <Compile Include="Controllers\BooksControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BookLibrary.UI\BookLibrary.UI.csproj">
-      <Project>{8DBC0C49-ECE5-46AA-933F-8395EA865591}</Project>
-      <Name>BookLibrary.UI</Name>
+    <ProjectReference Include="..\BookLibrary\BookLibrary.csproj">
+      <Project>{2BAC7214-F035-479C-AE1F-BEE819C6122C}</Project>
+      <Name>BookLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

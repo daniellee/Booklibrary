@@ -12,3 +12,17 @@ C:\Projekt\Booklibrary\BookLibrary\BookLibrary.Tests\bin\Debug\nunit.framework.x
 C:\Projekt\Booklibrary\BookLibrary\BookLibrary.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Projekt\Booklibrary\BookLibrary\BookLibrary.Tests\obj\Debug\BookLibrary.Tests.dll
 C:\Projekt\Booklibrary\BookLibrary\BookLibrary.Tests\obj\Debug\BookLibrary.Tests.pdb
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\BookLibrary.Tests.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\BookLibrary.Tests.pdb
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\BookLibrary.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\Moq.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\nunit.framework.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\nunit.mocks.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\pnunit.framework.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\BookLibrary.pdb
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\Moq.pdb
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\Moq.xml
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\nunit.framework.xml
+C:\Projekt\Booklibrary\BookLibrary.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Projekt\Booklibrary\BookLibrary.Tests\obj\Debug\BookLibrary.Tests.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\obj\Debug\BookLibrary.Tests.pdb
