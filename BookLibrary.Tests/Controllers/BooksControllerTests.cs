@@ -11,12 +11,12 @@ namespace BookLibrary.Tests.Controllers
 	public class BooksControllerTests
 	{
 		private BooksController homeController;
-		private Mock<IBooksRepository> booksRepositoryMock;
+		private Mock<IBookRepository> booksRepositoryMock;
 
 		[SetUp]
 		public void Setup()
 		{
-			booksRepositoryMock = new Mock<IBooksRepository>();
+			booksRepositoryMock = new Mock<IBookRepository>();
 			booksRepositoryMock.Setup(b => b.List()).Returns(new List<Book>());
 			homeController = new BooksController(booksRepositoryMock.Object);
 		}

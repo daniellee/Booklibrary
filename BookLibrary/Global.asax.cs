@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.SessionState;
 
 namespace BookLibrary
 {
@@ -17,8 +18,8 @@ namespace BookLibrary
 			routes.MapRoute(
 				"Default", // Route name
 				"{controller}/{action}/{id}", // URL with parameters
-				new { controller = "Books", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-			);
+				new {controller = "Books", action = "Index", id = UrlParameter.Optional} // Parameter defaults
+				);
 
 		}
 
@@ -28,6 +29,12 @@ namespace BookLibrary
 
 			RegisterGlobalFilters(GlobalFilters.Filters);
 			RegisterRoutes(RouteTable.Routes);
+
+			var documentStore = new Raven.Client.Document.DocumentStore { Url = "http://localhost:8080" };
+			documentStore.Initialize();
+			Application["DocumentStore"] = documentStore;
+
+			Bootstrapper.Config();
 		}
 	}
 }

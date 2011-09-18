@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Web.Mvc;
 using BookLibrary.Domain;
 
@@ -5,16 +6,16 @@ namespace BookLibrary.Controllers
 {
 	public class BooksController : Controller
 	{
-		private readonly IBooksRepository booksRepository;
+		private readonly IBookRepository bookRepository;
 
-		public BooksController(IBooksRepository booksRepository)
+		public BooksController(IBookRepository bookRepository)
 		{
-			this.booksRepository = booksRepository;
+			this.bookRepository = bookRepository;
 		}
 
 		public ViewResult Index()
 		{
-			return View(booksRepository.List());
+			return View(bookRepository.List().ToList());
 		}
 	}
 }
