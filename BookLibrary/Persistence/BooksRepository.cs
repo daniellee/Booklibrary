@@ -23,7 +23,7 @@ namespace BookLibrary.Persistence
 			return session.Query<Book>().ToList();
 		}
 
-		public void Add(Book book)
+		public void Save(Book book)
 		{
 			session.Store(book);
 			session.SaveChanges();

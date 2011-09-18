@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.SessionState;
 
 namespace BookLibrary
 {
@@ -30,11 +29,16 @@ namespace BookLibrary
 			RegisterGlobalFilters(GlobalFilters.Filters);
 			RegisterRoutes(RouteTable.Routes);
 
-			var documentStore = new Raven.Client.Document.DocumentStore { Url = "http://localhost:8080" };
-			documentStore.Initialize();
-			Application["DocumentStore"] = documentStore;
+			SetupRavenDb();
 
 			Bootstrapper.Config();
+		}
+
+		private void SetupRavenDb()
+		{
+			var documentStore = new Raven.Client.Document.DocumentStore {ConnectionStringName = "RavenDB"};
+			documentStore.Initialize();
+			Application["DocumentStore"] = documentStore;
 		}
 	}
 }

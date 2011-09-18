@@ -6,5 +6,6 @@ namespace BookLibrary.Domain
 	public interface IBooksRepository
 	{
 		IEnumerable<Book> List();
+		void Save(Book book);
 	}
 }

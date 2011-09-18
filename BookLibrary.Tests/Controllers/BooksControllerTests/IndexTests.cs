@@ -1,28 +1,21 @@
 ﻿using System.Collections.Generic;
-using BookLibrary.Controllers;
-using BookLibrary.Domain;
 using BookLibrary.Domain.Entities;
-using Moq;
 using NUnit.Framework;
 
-namespace BookLibrary.Tests.Controllers
+namespace BookLibrary.Tests.Controllers.BooksControllerTests
 {
 	[TestFixture]
-	public class BooksControllerTests
+	public class IndexTests : TestsBase
 	{
-		private BooksController homeController;
-		private Mock<IBooksRepository> booksRepositoryMock;
-
 		[SetUp]
-		public void Setup()
+		public override void Setup()
 		{
-			booksRepositoryMock = new Mock<IBooksRepository>();
+			base.Setup();
 			booksRepositoryMock.Setup(b => b.List()).Returns(new List<Book>());
-			homeController = new BooksController(booksRepositoryMock.Object);
 		}
 
 		[Test]
-		public void Index_ShouldReturnIndexView()
+		public void Should_Return_Index_View()
 		{
 			var result = homeController.Index();
 
@@ -30,7 +23,7 @@ namespace BookLibrary.Tests.Controllers
 		}
 
 		[Test]
-		public void Index_ShouldPassBooksToView()
+		public void Should_Pass_Books_To_View()
 		{
 			var books = new List<Book>();
 			booksRepositoryMock.Setup(b => b.List()).Returns(books);
@@ -38,7 +31,6 @@ namespace BookLibrary.Tests.Controllers
 			var result = homeController.Index();
 
 			Assert.That(result.Model, Is.SameAs(books));
-			
 		}
 	}
 }
