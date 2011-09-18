@@ -3,7 +3,7 @@ using BookLibrary.Domain.Entities;
 
 namespace BookLibrary.Domain
 {
-	public interface IBookRepository
+	public interface IBooksRepository
 	{
 		IEnumerable<Book> List();
 	}

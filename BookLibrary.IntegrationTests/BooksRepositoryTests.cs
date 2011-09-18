@@ -54,8 +54,8 @@ namespace BookLibrary.IntegrationTests
 		[TearDown]
 		public void AfterEachTest()
 		{
-			//if(book != null)
-			//	bookRepository.Delete(book);
+			if(book != null)
+				booksRepository.Delete(book);
 		}
 	}
 }

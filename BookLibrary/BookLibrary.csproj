@@ -84,7 +84,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Domain\Entities\Book.cs" />
-    <Compile Include="Domain\IBookRepository.cs" />
+    <Compile Include="Domain\IBooksRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

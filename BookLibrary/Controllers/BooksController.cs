@@ -6,16 +6,16 @@ namespace BookLibrary.Controllers
 {
 	public class BooksController : Controller
 	{
-		private readonly IBookRepository bookRepository;
+		private readonly IBooksRepository booksRepository;
 
-		public BooksController(IBookRepository bookRepository)
+		public BooksController(IBooksRepository booksRepository)
 		{
-			this.bookRepository = bookRepository;
+			this.booksRepository = booksRepository;
 		}
 
 		public ViewResult Index()
 		{
-			return View(bookRepository.List().ToList());
+			return View(booksRepository.List().ToList());
 		}
 	}
 }

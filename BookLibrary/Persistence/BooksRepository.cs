@@ -7,7 +7,7 @@ using Raven.Client.Document;
 
 namespace BookLibrary.Persistence
 {
-	public class BooksRepository : IBookRepository
+	public class BooksRepository : IBooksRepository
 	{
 		private readonly DocumentStore store;
 		private readonly IDocumentSession session;
