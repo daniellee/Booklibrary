@@ -2,7 +2,7 @@ namespace BookLibrary.Domain
 {
 	public interface IBook
 	{
-		string Id { get; }
+		int Id { get; }
 		string Title { get; }
 	}
 }

@@ -36,5 +36,12 @@ namespace BookLibrary.Controllers
 		{
 			return View("");
 		}
+
+	    public ActionResult Delete(int id)
+	    {
+	        booksRepository.Delete(id);
+
+	        return RedirectToAction("Index");
+	    }
 	}
 }
