@@ -7,8 +7,12 @@
 }
 
 <h2>Create book</h2>
+
+@Html.ValidationSummary()
 @using (Html.BeginForm())
 {
 	@Html.EditorFor(m => m.Title)
 	<input type="submit" value="Save" />
 }
+
+@Html.ActionLink("Back to list", "Index")

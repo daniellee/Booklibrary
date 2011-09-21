@@ -19,10 +19,16 @@ namespace BookLibrary.Controllers
 			return View(booksRepository.List());
 		}
 
-		public ViewResult Create(CreateBook createBook)
+		public ActionResult Create(CreateBook createBook)
 		{
+			if(!ModelState.IsValid)
+			{
+				return View(createBook);
+			}
+
 			booksRepository.Save(new Book{ Title = createBook.Title });
-			return null;
+			
+			return RedirectToAction("Index");
 		}
 
 		[HttpGet]

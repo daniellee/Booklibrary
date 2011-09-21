@@ -18,7 +18,7 @@ namespace BookLibrary.Persistence
 			this.session = store.OpenSession();
 		}
 
-		public IEnumerable<Book> List()
+		public IEnumerable<IBook> List()
 		{
 			return session.Query<Book>().ToList();
 		}
