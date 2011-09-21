@@ -13,7 +13,6 @@ namespace BookLibrary.ViewModels
 	{
 		public CreateBookValidator()
 		{
-			RuleFor(r => r.Title).NotNull().WithMessage("Must have title");
 			RuleFor(r => r.Title).NotEmpty().WithMessage("Must have title");
 		}
 	}
