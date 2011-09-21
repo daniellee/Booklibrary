@@ -20,9 +20,9 @@ namespace BookLibrary
 									y.TheCallingAssembly();
 									y.WithDefaultConventions();
 								});
+						x.AddRegistry(new ValidationRegistry());
 					}
 				);
-
 
 		}
 	}
