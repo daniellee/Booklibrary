@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BooksControllerTests\CreateTests.cs" />
+    <Compile Include="Controllers\BooksControllerTests\DeleteTests.cs" />
     <Compile Include="Controllers\BooksControllerTests\IndexTests.cs" />
     <Compile Include="Controllers\BooksControllerTests\TestsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,5 +7,6 @@ namespace BookLibrary.Domain
 	{
 		IEnumerable<IBook> List();
 		void Save(Book book);
+	    void Delete(int bookId);
 	}
 }

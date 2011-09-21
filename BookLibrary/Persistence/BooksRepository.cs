@@ -29,10 +29,21 @@ namespace BookLibrary.Persistence
 			session.SaveChanges();
 		}
 
-		public void Delete(Book book)
+	    public void Delete(int bookId)
+	    {
+            Book book = Get(bookId);
+            Delete(book);
+	    }
+
+	    public void Delete(Book book)
 		{
 			session.Delete(book);
 			session.SaveChanges();
 		}
+
+	    public Book Get(int id)
+	    {
+	        return session.Load<Book>("books/" + id);
+	    }
 	}
 }
