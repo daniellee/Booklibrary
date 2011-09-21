@@ -11,6 +11,6 @@
 <ul>
 @foreach (var book in Model)
 {
-	<li>@book.Title</li>
+	<li>@book.Title @Html.ActionLink("Delete", "Delete", new {book.Id})</li>
 }
 </ul>
