@@ -98,6 +98,8 @@
     <Compile Include="Persistence\BooksRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructureMapControllerFactory.cs" />
+    <Compile Include="StructureMapValidatorFactory.asax.cs" />
+    <Compile Include="ValidationRegistry.asax.cs" />
     <Compile Include="ViewModels\CreateBook.cs" />
   </ItemGroup>
   <ItemGroup>

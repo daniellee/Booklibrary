@@ -1,11 +1,6 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
-using BookLibrary.ViewModels;
-using FluentValidation;
 using FluentValidation.Mvc;
-using StructureMap;
-using StructureMap.Configuration.DSL;
 
 namespace BookLibrary
 {
@@ -25,7 +20,6 @@ namespace BookLibrary
 				"{controller}/{action}/{id}", // URL with parameters
 				new {controller = "Books", action = "Index", id = UrlParameter.Optional} // Parameter defaults
 				);
-
 		}
 
 		protected void Application_Start()
@@ -37,13 +31,15 @@ namespace BookLibrary
 
 			SetupRavenDb();
 
-			ObjectFactory.Configure(scanner => scanner.AddRegistry(new ValidationRegistry()));
-			var factory = new StructureMapValidatorFactory();
-			//Tell MVC to use FV for validation
-			ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(factory));
-			DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
-
 			Bootstrapper.Config();
+
+			SetupFluentValidationHooks();
+		}
+		
+		private static void SetupFluentValidationHooks()
+		{
+			ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(new StructureMapValidatorFactory()));
+			DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
 		}
 
 		private void SetupRavenDb()
@@ -51,22 +47,6 @@ namespace BookLibrary
 			var documentStore = new Raven.Client.Document.DocumentStore {ConnectionStringName = "RavenDB"};
 			documentStore.Initialize();
 			Application["DocumentStore"] = documentStore;
-		}
-	}
-
-	public class ValidationRegistry : Registry
-	{
-		public ValidationRegistry()
-		{
-			For<IValidator<CreateBook>>().Singleton().Use<CreateBookValidator>();
-		}
-	}
-
-	public class StructureMapValidatorFactory : ValidatorFactoryBase
-	{
-		public override IValidator CreateInstance(Type validatorType)
-		{
-			return ObjectFactory.TryGetInstance(validatorType) as IValidator;
 		}
 	}
 }
