@@ -17,7 +17,7 @@ namespace BookLibrary.Tests.Controllers.BooksControllerTests
 		[Test]
 		public void Should_Return_Index_View()
 		{
-			var result = homeController.Index();
+			var result = booksController.Index();
 
 			Assert.That(result.ViewName, Is.EqualTo(""));
 		}
@@ -28,7 +28,7 @@ namespace BookLibrary.Tests.Controllers.BooksControllerTests
 			var books = new List<Book>();
 			booksRepositoryMock.Setup(b => b.List()).Returns(books);
 
-			var result = homeController.Index();
+			var result = booksController.Index();
 
 			Assert.That(result.Model, Is.SameAs(books));
 		}

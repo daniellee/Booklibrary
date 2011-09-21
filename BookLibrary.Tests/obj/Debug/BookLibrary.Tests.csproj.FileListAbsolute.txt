@@ -42,3 +42,16 @@ C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\Raven.Abstractions.pdb
 C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\Raven.Json.pdb
 C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\NLog.xml
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\FluentValidation.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\FluentValidation.Mvc.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\FluentValidation.pdb
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\FluentValidation.xml
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\FluentValidation.Mvc.pdb
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\de\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\es\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\fr\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\it\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\nl\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\pl\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\pt\FluentValidation.resources.dll
+C:\Projekt\Booklibrary\BookLibrary.Tests\bin\Debug\sv\FluentValidation.resources.dll

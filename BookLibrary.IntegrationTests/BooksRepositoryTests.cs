@@ -16,7 +16,7 @@ namespace BookLibrary.IntegrationTests
 		{
 			booksRepository = new BooksRepository(documentStore);
 		}
-
+		
 		[Test]
 		public void Add_BookWithTitle_ShouldPersist()
 		{
@@ -26,7 +26,6 @@ namespace BookLibrary.IntegrationTests
 			var books = booksRepository.List();
 
 			Assert.That(books.First().Title, Is.EqualTo("jippi"));
-			
 		}
 
 		[TearDown]

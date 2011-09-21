@@ -9,7 +9,7 @@ namespace BookLibrary.Tests.Controllers.BooksControllerTests
 {
 	public class TestsBase
 	{
-		protected BooksController homeController;
+		protected BooksController booksController;
 		protected Mock<IBooksRepository> booksRepositoryMock;
 
 		[SetUp]
@@ -17,7 +17,7 @@ namespace BookLibrary.Tests.Controllers.BooksControllerTests
 		{
 			booksRepositoryMock = new Mock<IBooksRepository>();
 			booksRepositoryMock.Setup(b => b.List()).Returns(new List<Book>());
-			homeController = new BooksController(booksRepositoryMock.Object);
+			booksController = new BooksController(booksRepositoryMock.Object);
 		}
 	}
 }

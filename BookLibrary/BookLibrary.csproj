@@ -37,6 +37,12 @@
     <Reference Include="AsyncCtpLibrary">
       <HintPath>..\packages\RavenDB.1.0.0.472\lib\net40\AsyncCtpLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.3.1.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\packages\FluentValidation.MVC3.3.1.0.0\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -84,6 +90,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Domain\Entities\Book.cs" />
+    <Compile Include="Domain\IBook.cs" />
     <Compile Include="Domain\IBooksRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
