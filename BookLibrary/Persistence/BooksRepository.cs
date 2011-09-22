@@ -32,6 +32,10 @@ namespace BookLibrary.Persistence
 	    public void Delete(int bookId)
 	    {
             Book book = Get(bookId);
+
+            if(book == null)
+                return;
+
             Delete(book);
 	    }
 

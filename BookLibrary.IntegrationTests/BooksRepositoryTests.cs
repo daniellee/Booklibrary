@@ -52,6 +52,18 @@ namespace BookLibrary.IntegrationTests
 	        CleanupAfterDelete();
 	    }
 
+	    [Test]
+	    public void Delete_WhenNoSuchBookExists_ShouldJustReturn()
+	    {
+            book = new Book { Id = 999999999, Title = "Run away, run away" };
+
+            booksRepository.Delete(book.Id);
+
+            Assert.That(booksRepository.Get(book.Id), Is.Null);
+
+            CleanupAfterDelete();
+	    }
+
 	    private void CleanupAfterDelete()
 	    {
 	        book = null;
